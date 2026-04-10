@@ -81,7 +81,6 @@
             border-radius:6px;
             text-decoration:none;
             font-size:15px;
-            transition:background 0.3s ease;
         }
         .qq-btn:hover{
             background:#2980b9;
@@ -102,67 +101,21 @@
             padding: 8px 16px;
             background: #3498db;
             color: #fff;
-            border: none;
             border-radius: 6px;
-            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
         }
         .notice-btn:hover{
             background:#2980b9;
-        }
-        .notice-panel{
-            position: fixed;
-            top: 60px;
-            right: 15px;
-            z-index: 9998;
-            width: 320px;
-            background:#2d2d2d;
-            border:1px solid #444;
-            border-radius:8px;
-            padding:18px;
-            display:none;
-        }
-        .notice-title{
-            font-size:18px;
-            color:#fff;
-            margin-bottom:10px;
-        }
-        .notice-content{
-            min-height:60px;
-            color:#eee;
-            font-size:14px;
-            margin-bottom:12px;
-            white-space:pre-line;
-        }
-        .notice-input{
-            width:100%;
-            padding:10px;
-            margin-bottom:10px;
-            background:#444;
-            color:#fff;
-            border:1px solid #666;
-            border-radius:6px;
-        }
-        .notice-save{
-            width:100%;
-            padding:10px;
-            background:#3498db;
-            color:#fff;
-            border:none;
-            border-radius:6px;
-            cursor:pointer;
         }
     </style>
 </head>
 <body>
 
-<button class="notice-btn" id="noticeBtn">网站公告</button>
-
-<div class="notice-panel" id="noticePanel">
-    <div class="notice-title">📢 新轴心MOD公告</div>
-    <div class="notice-content" id="noticeContent">加载中...</div>
-    <input type="password" class="notice-input" id="pwd" placeholder="输入管理员密码">
-    <button class="notice-save" id="goEdit">公告编辑</button>
-</div>
+<!-- 一键跳转腾讯文档公告 -->
+<a class="notice-btn" href="https://docs.qq.com/doc/DQ01zemdkUFZNZkVw" target="_blank">
+    查看公告
+</a>
 
 <div class="header">
     <h1>新轴心MOD</h1>
@@ -177,10 +130,10 @@
 
 <div class="box">
     <h2>MOD特色</h2>
-    <p>：体验 1936中德意新轴心的瓜分世界之旅 （十分建议等1.0版本出后再玩）</p>
-    <p>南京：在东方 沉睡的巨龙因常凯申的忽然离世而陷入了动荡 此时军国主义的日本手持军刀磨刀霍霍... 东北的沦陷让全民族陷入了最危急的时候 民族存亡之际 中国必须要做出她的抉择</p>
-    <p>柏林：来自柏林的元首对凡尔赛条约束缚下的德意志感到愤怒 然而英法已经虚弱 纳粹党已经掌控德国政权并稳固了元首的绝对权威 现在是时候为帝国挣脱枷锁的第一步谋划了...</p>
-    <p>罗马：第一次世界大战 不仅使得意大利经济崩溃 作为战胜者的他在谈判桌上却无力与列强争论 如今已是墨索里尼进军罗马十余年之时 谈判桌上拿不到的 意大利必须通过战争夺取</p>
+    <p>：体验1936中德意新轴心的瓜分世界之旅（十分建议等1.0版本出后再玩）</p>
+    <p>南京：在东方沉睡的巨龙因常凯申的忽然离世而陷入了动荡 此时军国主义的日本手持军刀磨刀霍霍...东北的沦陷让全民族陷入了最危急的时候 民族存亡之际 中国必须要做出她的抉择</p>
+    <p>柏林：来自柏林的元首对凡尔赛条约束缚下的德意志感到愤怒 然而英法已经虚弱 纳粹党已经掌控德国政权并稳固元首的绝对权威 现在是时候为帝国挣脱枷锁的第一步谋划了...</p>
+    <p>罗马：第一次世界大战不仅使得意大利经济崩溃 作为战胜者的他在谈判桌上却无力与列强争论 如今已是墨索里尼进军罗马十余年之时 谈判桌上拿不到的 意大利必须通过战争夺取</p>
     <p>.........</p>
 </div>
 
@@ -190,16 +143,16 @@
     <p>【2025.09.01】新轴心MOD立项 开始制作</p>
     <p>【2025.09.23】 新轴心0.1版本开启小规模测试</p>
     <p>【2025.10】 优化版本细节，UI风格</p>
-    <p>【2025.11.06】 “新轴心V0.2测试版”正式发布 更新了德国大量内容 游戏剧本事件数量增加至500+</p>
-    <p>【2025.11.15】新轴心V0.21测试版发布，修复已知问题，撰写后续文本</p>
+    <p>【2025.11.06】 “新轴心V0.2测试版”正式发布 更新大量内容 游戏剧本事件增至500+</p>
+    <p>【2025.11.15】新轴心V0.21测试版发布，修复已知问题</p>
     <p>【2025.11.26】新轴心V0.22测试版补丁 与0.23扩展发布</p>
-    <p>【2026.01.11】 “新轴心V0.3-寸血山河”版本发布 新增中国黑线与历史线的游玩内容 事件增至900+</p>
-    <p>【2026.02.10】新轴心V0.31补丁更新，修复大多数已知问题</p>
-    <p>【2026.02.15】新轴心V0.32版本发布，部分事件补充完善</p>
-    <p>【2026.02.26】新轴心V0.33版本发布新增部分意大利事件 事件增至1000+</p>
-    <p>【2026.02.27】新轴心制作组 通过并确定1.0版本的更新内容为 意大利游玩内容、苏联游玩内容 以及中国游玩内容的进一步完善与扩展</p>
-    <p>【2026.03.10】更新小版本bug问题修复优化</p>
-    <p>【2026.04.01】 “新轴心V1.0版本-凯撒归来”开启制作组内部测试并逐步优化现存问题</p>
+    <p>【2026.01.11】 “新轴心V0.3-寸血山河”版本发布 新增内容 事件增至900+</p>
+    <p>【2026.02.10】新轴心V0.31补丁更新，修复问题</p>
+    <p>【2026.02.15】新轴心V0.32版本发布，完善内容</p>
+    <p>【2026.02.26】新轴心V0.33版本发布 新增意大利事件</p>
+    <p>【2026.02.27】制作组确定1.0版本更新方向</p>
+    <p>【2026.03.10】优化小版本bug</p>
+    <p>【2026.04.01】 “新轴心V1.0版本-凯撒归来”内部测试</p>
 </div>
 
 <div class="box">
@@ -224,47 +177,5 @@
    ©2026 AOH2新轴心MOD X 新轴心制作组 版权所有 | 本网页由游虎提供技术支持
 </div>
 
-<script>
-// 密码
-const PASSWORD = "xzxFXtl666.xinzhouzinwoleigesaogang)）";
-
-// 网站读取公告（所有人可见）
-const NOTICE_URL = "https://raw.githubusercontent.com/youhuworks/mod-New-axis/main/notice.txt";
-
-// 密码正确后打开的编辑页
-const EDIT_URL = "https://github.com/youhuworks/mod-New-axis/edit/main/notice.txt";
-
-const noticeBtn = document.getElementById("noticeBtn");
-const noticePanel = document.getElementById("noticePanel");
-const noticeContent = document.getElementById("noticeContent");
-const pwdInput = document.getElementById("pwd");
-const goEdit = document.getElementById("goEdit");
-
-noticeBtn.onclick = function(){
-    noticePanel.style.display = noticePanel.style.display == "block" ? "none" : "block";
-    if(noticePanel.style.display == "block") loadNotice();
-}
-
-// 加载公告
-async function loadNotice(){
-    try{
-        let res = await fetch(NOTICE_URL + "?t=" + Date.now());
-        let txt = await res.text();
-        noticeContent.innerText = txt || "暂无公告";
-    }catch(e){
-        noticeContent.innerText = "公告加载中";
-    }
-}
-
-// 密码正确 → 打开编辑
-goEdit.onclick = function(){
-    if(pwdInput.value == PASSWORD){
-        alert("验证成功，打开公告编辑");
-        window.open(EDIT_URL, "_blank");
-    }else{
-        alert("密码错误");
-    }
-}
-</script>
 </body>
 </html>
