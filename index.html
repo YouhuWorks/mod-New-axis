@@ -18,7 +18,9 @@
             overflow-x: auto!important;
         }
         body{
-            background:#1a1a1a;
+            /* 核心修改：添加渐变背景 */
+            /* 第一色是图片底部的深黑，第二色是页面背景黑 */
+            background: linear-gradient(to bottom, #1a1a1a 85%, #111111 100%);
             color:#fff;
             line-height:1.6;
             width:1200px!important;
@@ -29,8 +31,11 @@
         .top-banner{
             width:1000px;
             margin:20px auto 0;
-            border-radius:8px;
+            border-radius:8px 8px 0 0; /* 确保圆角只在上方，下方尖角过渡 */
             overflow:hidden;
+            /* 核心修改：添加底部过渡阴影 */
+            /* 模拟图片和界面融合的效果，颜色和背景一致 */
+            box-shadow: 0 15px 30px 15px #1a1a1a;
         }
         .top-banner img{
             width:100%;
