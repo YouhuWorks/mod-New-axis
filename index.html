@@ -2,7 +2,8 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200, user-scalable=yes">
+    <!-- 核心：强制电脑版、禁止自适应、允许缩放 -->
+    <meta name="viewport" content="width=1200, user-scalable=yes, initial-scale=0.2, maximum-scale=5.0, minimum-scale=0.2">
     <title>AOH2 新轴心 MOD</title>
     <style>
         *{
@@ -12,15 +13,30 @@
             font-family: "微软雅黑",sans-serif;
         }
         html{
-            width:100%!important;
+            width:1200px!important;
             min-width:1200px!important;
+            overflow-x: auto!important;
         }
         body{
             background:#1a1a1a;
             color:#fff;
             line-height:1.6;
-            min-width:1200px;
+            width:1200px!important;
+            min-width:1200px!important;
+            overflow-x: auto!important;
         }
+
+        .top-banner{
+            width:1000px;
+            margin:20px auto 0;
+            border-radius:8px;
+            overflow:hidden;
+        }
+        .top-banner img{
+            width:100%;
+            display:block;
+        }
+
         .header{
             background:#222;
             padding:20px;
@@ -58,6 +74,20 @@
             font-size:15px;
             margin-bottom:8px;
         }
+
+        .city-row{
+            display:flex;
+            align-items:center;
+            gap:14px;
+            margin-bottom:10px;
+        }
+        .city-icon{
+            width:38px;
+            height:38px;
+            object-fit:contain;
+            flex-shrink:0;
+        }
+
         .qq-group-wrap{
             display:flex;
             justify-content:center;
@@ -81,6 +111,7 @@
             border-radius:6px;
             text-decoration:none;
             font-size:15px;
+            cursor:pointer;
         }
         .qq-btn:hover{
             background:#2980b9;
@@ -99,11 +130,12 @@
             right: 15px;
             z-index: 9999;
             padding: 8px 16px;
-            background: #3498db;
-            color: #fff;
-            border-radius: 6px;
-            font-size: 14px;
-            text-decoration: none;
+            background:#3498db;
+            color:#fff;
+            border-radius:6px;
+            font-size:14px;
+            text-decoration:none;
+            cursor:pointer;
         }
         .notice-btn:hover{
             background:#2980b9;
@@ -112,10 +144,13 @@
 </head>
 <body>
 
-<!-- 一键跳转腾讯文档公告 -->
 <a class="notice-btn" href="https://docs.qq.com/doc/DQ01zemdkUFZNZkVw" target="_blank">
     查看公告
 </a>
+
+<div class="top-banner">
+    <img src="banner.jpg" alt="新轴心 Banner">
+</div>
 
 <div class="header">
     <h1>新轴心MOD</h1>
@@ -130,10 +165,23 @@
 
 <div class="box">
     <h2>MOD特色</h2>
-    <p>：体验1936中德意新轴心的瓜分世界之旅（十分建议等1.0版本出后再玩）</p>
-    <p>南京：在东方沉睡的巨龙因常凯申的忽然离世而陷入了动荡 此时军国主义的日本手持军刀磨刀霍霍...东北的沦陷让全民族陷入了最危急的时候 民族存亡之际 中国必须要做出她的抉择</p>
-    <p>柏林：来自柏林的元首对凡尔赛条约束缚下的德意志感到愤怒 然而英法已经虚弱 纳粹党已经掌控德国政权并稳固元首的绝对权威 现在是时候为帝国挣脱枷锁的第一步谋划了...</p>
-    <p>罗马：第一次世界大战不仅使得意大利经济崩溃 作为战胜者的他在谈判桌上却无力与列强争论 如今已是墨索里尼进军罗马十余年之时 谈判桌上拿不到的 意大利必须通过战争夺取</p>
+    <p>体验1936中德意新轴心的瓜分世界之旅（十分建议等1.0版本出后再玩）</p>
+
+    <div class="city-row">
+        <img src="nanjing.png" class="city-icon" alt="南京">
+        <p>南京：在东方沉睡的巨龙因常凯申的忽然离世而陷入了动荡 此时军国主义的日本手持军刀磨刀霍霍...东北的沦陷让全民族陷入了最危急的时候 民族存亡之际 中国必须要做出她的抉择</p>
+    </div>
+
+    <div class="city-row">
+        <img src="berlin.png" class="city-icon" alt="柏林">
+        <p>柏林：来自柏林的元首对凡尔赛条约束缚下的德意志感到愤怒 然而英法已经虚弱 纳粹党已经掌控德国政权并稳固元首的绝对权威 现在是时候为帝国挣脱枷锁的第一步谋划了...</p>
+    </div>
+
+    <div class="city-row">
+        <img src="rome.png" class="city-icon" alt="罗马">
+        <p>罗马：第一次世界大战不仅使得意大利经济崩溃 作为战胜者的他在谈判桌上却无力与列强争论 如今已是墨索里尼进军罗马十余年之时 谈判桌上拿不到的 意大利必须通过战争夺取</p>
+    </div>
+
     <p>.........</p>
 </div>
 
