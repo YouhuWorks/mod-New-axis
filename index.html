@@ -275,12 +275,12 @@
                 <button class="slide-arrow arrow-right" onclick="goNext()">→</button>
                 <div class="video-slider" id="videoSlider">
                     <div class="video-slide">
-                        <video muted loop playsinline>
+                        <video controls loop>
                             <source src="xzx1.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="video-slide">
-                        <video muted loop playsinline>
+                        <video controls loop>
                             <source src="xzx2.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -291,17 +291,13 @@
 </div>
 </div>
 <div class="footer">
-   ©2026 AOH2新轴心MOD X 新轴心制作组 版权所有 | 本网页由游虎提供
+   ©2026 AOH2新轴心MOD X 新轴心制作组 版权所有 | 本网页由游虎提供技术支持
 </div>
 
 <script>
 const slider = document.getElementById('videoSlider');
 let current = 0;
-
-// 自动播放
-document.querySelectorAll('video').forEach(v => {
-    v.play().catch(() => {});
-});
+let startX = 0;
 
 // 上一个
 function goPrev(){
