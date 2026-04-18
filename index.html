@@ -2,7 +2,6 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <!-- 核心：强制电脑版、禁止自适应、允许缩放 -->
     <meta name="viewport" content="width=1200, user-scalable=yes, initial-scale=0.2, maximum-scale=5.0, minimum-scale=0.2">
     <title>AOH2 新轴心 MOD</title>
     <style>
@@ -25,7 +24,6 @@
             min-width:1200px!important;
             overflow-x: auto!important;
         }
-
         .top-banner{
             width:1000px;
             margin:20px auto 0;
@@ -36,7 +34,6 @@
             width:100%;
             display:block;
         }
-
         .header{
             background:#222;
             padding:20px;
@@ -74,7 +71,6 @@
             font-size:15px;
             margin-bottom:8px;
         }
-
         .city-row{
             display:flex;
             align-items:center;
@@ -87,10 +83,10 @@
             object-fit:contain;
             flex-shrink:0;
         }
-
         .qq-group-wrap{
             display:flex;
             justify-content:center;
+            align-items:center;
             gap:30px;
             margin-top:10px;
             flex-wrap:nowrap;
@@ -116,6 +112,71 @@
         .qq-btn:hover{
             background:#2980b9;
         }
+
+        /* 滑动视频区域样式 */
+        .video-item{
+            text-align:center;
+        }
+        .video-title{
+            font-size:16px;
+            margin-bottom:10px;
+            font-weight:bold;
+            color:#fff;
+        }
+        .video-box{
+            width:320px;
+            height:180px;
+            background:#111;
+            border:2px solid #3498db;
+            border-radius:8px;
+            overflow:hidden;
+            position:relative;
+        }
+        .video-slider{
+            display:flex;
+            height:100%;
+            transition:transform 0.3s ease;
+        }
+        .video-slide{
+            width:320px;
+            height:100%;
+            flex-shrink:0;
+        }
+        .video-slide video{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            display:block;
+        }
+
+        /* 左右箭头 */
+        .slide-arrow{
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            width:30px;
+            height:30px;
+            background:rgba(0,0,0,0.5);
+            border:none;
+            color:#fff;
+            font-size:16px;
+            border-radius:50%;
+            cursor:pointer;
+            z-index:10;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .slide-arrow:hover{
+            background:#3498db;
+        }
+        .arrow-left{
+            left:5px;
+        }
+        .arrow-right{
+            right:5px;
+        }
+
         .footer{
             text-align:center;
             padding:25px;
@@ -123,7 +184,6 @@
             color:#999;
             font-size:14px;
         }
-
         .notice-btn{
             position: fixed;
             top: 15px;
@@ -143,48 +203,38 @@
     </style>
 </head>
 <body>
-
 <a class="notice-btn" href="https://docs.qq.com/doc/DQ01zemdkUFZNZkVw" target="_blank">
     查看公告
 </a>
-
 <div class="top-banner">
     <img src="banner.jpg" alt="新轴心 Banner">
 </div>
-
 <div class="header">
     <h1>新轴心MOD</h1>
     <p>AOH2 原创MOD</p>
 </div>
-
 <div class="container">
 <div class="box">
     <h2>MOD介绍</h2>
     <p>AOH2新轴心MOD是一款历史向以崛起轴心国为核心的MOD，包含历史上德国的扩张历程与轴心国取得二战胜利的架空史剧情，在这里你将成为历史的操控者，带领德国/（其他国家）走向胜利！</p>
 </div>
-
 <div class="box">
     <h2>MOD特色</h2>
     <p>体验1936中德意新轴心的瓜分世界之旅（十分建议等1.0版本出后再玩）</p>
-
     <div class="city-row">
         <img src="nanjing.png" class="city-icon" alt="南京">
         <p>南京：在东方沉睡的巨龙因常凯申的忽然离世而陷入了动荡 此时军国主义的日本手持军刀磨刀霍霍...东北的沦陷让全民族陷入了最危急的时候 民族存亡之际 中国必须要做出她的抉择</p>
     </div>
-
     <div class="city-row">
         <img src="berlin.png" class="city-icon" alt="柏林">
         <p>柏林：来自柏林的元首对凡尔赛条约束缚下的德意志感到愤怒 然而英法已经虚弱 纳粹党已经掌控德国政权并稳固元首的绝对权威 现在是时候为帝国挣脱枷锁的第一步谋划了...</p>
     </div>
-
     <div class="city-row">
         <img src="rome.png" class="city-icon" alt="罗马">
         <p>罗马：第一次世界大战不仅使得意大利经济崩溃 作为战胜者的他在谈判桌上却无力与列强争论 如今已是墨索里尼进军罗马十余年之时 谈判桌上拿不到的 意大利必须通过战争夺取</p>
     </div>
-
     <p>.........</p>
 </div>
-
 <div class="box">
     <h2>更新日志</h2>
     <p>当前最新版本号V 0.33</p>
@@ -202,7 +252,6 @@
     <p>【2026.03.10】优化小版本bug</p>
     <p>【2026.04.01】 “新轴心V1.0版本-凯撒归来”内部测试</p>
 </div>
-
 <div class="box">
     <h2>联系我们</h2>
     <p> MOD 作者:“f洗头佬”</p>
@@ -215,15 +264,73 @@
         </div>
         <div class="qq-group-item">
             <p class="qq-group-name">【C.C】【团结协定】阿非利加</p>
-            <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=g2-qbD1ply91zKyX5Qai8EdeBb6xwq9c&authKey=HeGcke2ZL20ZfS3IcsutSnfRJE25BxVi8ghY38bX2gcj%2BgPe4nbTucLuiWnNvpqY&noverify=0&group_code=603237134" target="_blank" class="qq-btn">加入群聊</a>
+            <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=g2-qbD1ply91zKyX5Qai8EdeBb6xwq9c&authKey=HeGcke2ZL20ZfS3IcsutSnRJE25BxVi8ghY38bX2gcj%2BgPe4nbTucLuiWnNvpqY&noverify=0&group_code=603237134" target="_blank" class="qq-btn">加入群聊</a>
+        </div>
+
+        <!-- 左右滑动双视频 + 箭头 -->
+        <div class="video-item">
+            <p class="video-title">MOD宣传视频</p>
+            <div class="video-box">
+                <button class="slide-arrow arrow-left" onclick="goPrev()">←</button>
+                <button class="slide-arrow arrow-right" onclick="goNext()">→</button>
+                <div class="video-slider" id="videoSlider">
+                    <div class="video-slide">
+                        <video muted loop playsinline>
+                            <source src="xzx1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-slide">
+                        <video muted loop playsinline>
+                            <source src="xzx2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 </div>
-
 <div class="footer">
    ©2026 AOH2新轴心MOD X 新轴心制作组 版权所有 | 本网页由游虎提供技术支持
 </div>
 
+<script>
+const slider = document.getElementById('videoSlider');
+let current = 0;
+
+// 自动播放
+document.querySelectorAll('video').forEach(v => {
+    v.play().catch(() => {});
+});
+
+// 上一个
+function goPrev(){
+    current = 0;
+    updateSlide();
+}
+// 下一个
+function goNext(){
+    current = 1;
+    updateSlide();
+}
+function updateSlide(){
+    slider.style.transform = `translateX(-${current * 320}px)`;
+}
+
+// 触摸滑动
+slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+});
+slider.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const dx = endX - startX;
+    if(dx < -40){
+        current = 1;
+    }else if(dx > 40){
+        current = 0;
+    }
+    updateSlide();
+});
+</script>
 </body>
 </html>
